@@ -105,7 +105,7 @@ const InteractiveSkillBadges: React.FC = () => {
   }, [activeBadges.length, badgeId, allSkills]);
 
   return (
-    <div className='absolute inset-0 pointer-events-none overflow-hidden'>
+    <div className='absolute inset-0 pointer-events-none overflow-hidden hidden md:block'>
       {activeBadges.map((badge, index) => (
         <div
           key={badge.id}

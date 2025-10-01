@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import SEO from '../components/SEO';
 
 interface Project {
@@ -16,6 +16,11 @@ interface Project {
 
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
+
+  // Scroll to top when category changes (especially important on mobile)
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [selectedCategory]);
 
   const projects: Project[] = [
     {
