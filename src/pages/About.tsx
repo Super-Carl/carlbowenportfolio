@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import SEO from '../components/SEO';
 import CVViewer from '../components/CVViewer';
 
-const About: React.FC = () => {
+const About = () => {
   const [isCVViewerOpen, setIsCVViewerOpen] = useState(false);
 
   const handleDownloadResume = () => {
@@ -200,7 +200,17 @@ const About: React.FC = () => {
             <div className='max-w-3xl mx-auto'>
               <div className='space-y-8'>
                 <div className='flex items-start space-x-4'>
-                  <div className='flex-shrink-0 w-4 h-4 bg-primary-600 rounded-full mt-2'></div>
+                  <div className='flex-shrink-0 w-12 h-12 bg-white rounded-full mt-2 flex items-center justify-center shadow-md'>
+                    <img
+                      src='/resources/images/brands/admiral-group.jpeg'
+                      alt='Admiral Group logo'
+                      className='w-8 h-8 object-contain'
+                      loading='lazy'
+                      width='32'
+                      height='32'
+                      decoding='async'
+                    />
+                  </div>
                   <div className='flex-1'>
                     <div className='bg-white rounded-lg p-6 shadow-md'>
                       <h3 className='text-xl font-semibold text-gray-900 mb-2'>
@@ -221,7 +231,17 @@ const About: React.FC = () => {
                 </div>
 
                 <div className='flex items-start space-x-4'>
-                  <div className='flex-shrink-0 w-4 h-4 bg-primary-600 rounded-full mt-2'></div>
+                  <div className='flex-shrink-0 w-12 h-12 bg-white rounded-full mt-2 flex items-center justify-center shadow-md'>
+                    <img
+                      src='/resources/images/brands/digiblez.jpg'
+                      alt='Digiblez logo'
+                      className='w-8 h-8 object-contain'
+                      loading='lazy'
+                      width='32'
+                      height='32'
+                      decoding='async'
+                    />
+                  </div>
                   <div className='flex-1'>
                     <div className='bg-white rounded-lg p-6 shadow-md'>
                       <h3 className='text-xl font-semibold text-gray-900 mb-2'>
@@ -241,7 +261,17 @@ const About: React.FC = () => {
                 </div>
 
                 <div className='flex items-start space-x-4'>
-                  <div className='flex-shrink-0 w-4 h-4 bg-primary-600 rounded-full mt-2'></div>
+                  <div className='flex-shrink-0 w-12 h-12 bg-white rounded-full mt-2 flex items-center justify-center shadow-md'>
+                    <img
+                      src='/resources/images/brands/experian.jpeg'
+                      alt='Experian logo'
+                      className='w-8 h-8 object-contain'
+                      loading='lazy'
+                      width='32'
+                      height='32'
+                      decoding='async'
+                    />
+                  </div>
                   <div className='flex-1'>
                     <div className='bg-white rounded-lg p-6 shadow-md'>
                       <h3 className='text-xl font-semibold text-gray-900 mb-2'>
@@ -262,7 +292,17 @@ const About: React.FC = () => {
                 </div>
 
                 <div className='flex items-start space-x-4'>
-                  <div className='flex-shrink-0 w-4 h-4 bg-primary-600 rounded-full mt-2'></div>
+                  <div className='flex-shrink-0 w-12 h-12 bg-white rounded-full mt-2 flex items-center justify-center shadow-md'>
+                    <img
+                      src='/resources/images/brands/digiblez.jpg'
+                      alt='Digiblez logo'
+                      className='w-8 h-8 object-contain'
+                      loading='lazy'
+                      width='32'
+                      height='32'
+                      decoding='async'
+                    />
+                  </div>
                   <div className='flex-1'>
                     <div className='bg-white rounded-lg p-6 shadow-md'>
                       <h3 className='text-xl font-semibold text-gray-900 mb-2'>
@@ -283,7 +323,17 @@ const About: React.FC = () => {
                 </div>
 
                 <div className='flex items-start space-x-4'>
-                  <div className='flex-shrink-0 w-4 h-4 bg-primary-600 rounded-full mt-2'></div>
+                  <div className='flex-shrink-0 w-12 h-12 bg-white rounded-full mt-2 flex items-center justify-center shadow-md'>
+                    <img
+                      src='/resources/images/brands/raise.jpeg'
+                      alt='Raise logo'
+                      className='w-8 h-8 object-contain'
+                      loading='lazy'
+                      width='32'
+                      height='32'
+                      decoding='async'
+                    />
+                  </div>
                   <div className='flex-1'>
                     <div className='bg-white rounded-lg p-6 shadow-md'>
                       <h3 className='text-xl font-semibold text-gray-900 mb-2'>

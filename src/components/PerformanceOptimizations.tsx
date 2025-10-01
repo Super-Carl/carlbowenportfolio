@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 
-const PerformanceOptimizations: React.FC = () => {
+const PerformanceOptimizations = () => {
   useEffect(() => {
     // Preload critical resources
     const preloadCriticalResources = () => {

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import SEO from '../components/SEO';
 
 interface Project {
@@ -9,10 +9,12 @@ interface Project {
   image: string;
   liveUrl?: string;
   githubUrl?: string;
-  category: string;
+  year: number;
+  company: string;
+  companyLogo: string;
 }
 
-const Projects: React.FC = () => {
+const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const projects: Project[] = [
@@ -31,7 +33,9 @@ const Projects: React.FC = () => {
       ],
       image: '/api/placeholder/600/400',
       liveUrl: 'https://www.experian.co.uk',
-      category: 'fullstack',
+      year: 2024,
+      company: 'Experian',
+      companyLogo: '/resources/images/brands/experian.jpeg',
     },
     {
       id: 2,
@@ -49,7 +53,9 @@ const Projects: React.FC = () => {
       ],
       image: '/api/placeholder/600/400',
       liveUrl: 'https://www.digiblez.com',
-      category: 'fullstack',
+      year: 2023,
+      company: 'Digiblez',
+      companyLogo: '/resources/images/brands/digiblez.jpg',
     },
     {
       id: 3,
@@ -66,7 +72,9 @@ const Projects: React.FC = () => {
         'Cypress',
       ],
       image: '/api/placeholder/600/400',
-      category: 'fullstack',
+      year: 2022,
+      company: 'Raise',
+      companyLogo: '/resources/images/brands/raise.jpeg',
     },
     {
       id: 4,
@@ -83,7 +91,9 @@ const Projects: React.FC = () => {
         'Cypress',
       ],
       image: '/api/placeholder/600/400',
-      category: 'fullstack',
+      year: 2021,
+      company: 'Vibrant Media',
+      companyLogo: '/resources/images/brands/vibrant-media.jpeg',
     },
     {
       id: 5,
@@ -100,7 +110,9 @@ const Projects: React.FC = () => {
         'PWA',
       ],
       image: '/api/placeholder/600/400',
-      category: 'fullstack',
+      year: 2020,
+      company: 'Superbet',
+      companyLogo: '/resources/images/brands/superbet.jpeg',
     },
     {
       id: 6,
@@ -116,21 +128,28 @@ const Projects: React.FC = () => {
         'ES6+',
       ],
       image: '/api/placeholder/600/400',
-      category: 'frontend',
+      year: 2019,
+      company: 'Endemol Shine Group',
+      companyLogo: '/resources/images/brands/endemol-shine-group.jpeg',
     },
   ];
 
   const categories = [
-    { value: 'all', label: 'All Projects' },
-    { value: 'frontend', label: 'Frontend' },
-    { value: 'backend', label: 'Backend' },
-    { value: 'fullstack', label: 'Full Stack' },
+    { value: 'all', label: 'All' },
+    { value: '2024', label: '2024' },
+    { value: '2023', label: '2023' },
+    { value: '2022', label: '2022' },
+    { value: '2021', label: '2021' },
+    { value: '2020', label: '2020' },
+    { value: '2019', label: '2019' },
   ];
 
   const filteredProjects =
     selectedCategory === 'all'
       ? projects
-      : projects.filter(project => project.category === selectedCategory);
+      : projects.filter(
+          project => project.year.toString() === selectedCategory
+        );
 
   return (
     <>
@@ -185,8 +204,34 @@ const Projects: React.FC = () => {
                   className='card overflow-hidden hover:scale-105 transform transition-all duration-300'
                 >
                   {/* Project Image */}
-                  <div className='h-48 bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center text-white text-2xl font-bold'>
-                    {project.title.charAt(0)}
+                  <div className='relative h-48 bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center'>
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className='w-full h-full object-cover'
+                      loading='lazy'
+                      width='400'
+                      height='192'
+                      decoding='async'
+                    />
+                    <div className='absolute top-4 right-4'>
+                      <div className='bg-white rounded-lg p-2 shadow-md'>
+                        <img
+                          src={project.companyLogo}
+                          alt={`${project.company} logo`}
+                          className='w-8 h-8 object-contain'
+                          loading='lazy'
+                          width='32'
+                          height='32'
+                          decoding='async'
+                        />
+                      </div>
+                    </div>
+                    <div className='absolute top-4 left-4'>
+                      <span className='bg-white text-gray-700 px-2 py-1 rounded text-sm font-medium'>
+                        {project.year}
+                      </span>
+                    </div>
                   </div>
 
                   {/* Project Content */}

@@ -1,7 +1,6 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Footer: React.FC = () => {
+const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
@@ -24,8 +23,8 @@ const Footer: React.FC = () => {
       ),
     },
     {
-      name: 'Digiblez',
-      url: 'https://www.digiblez.com',
+      name: 'Portfolio',
+      url: 'https://www.carlbowen.me',
       icon: (
         <svg className='w-5 h-5' fill='currentColor' viewBox='0 0 24 24'>
           <path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5' />

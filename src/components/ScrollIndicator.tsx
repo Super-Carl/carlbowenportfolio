@@ -1,12 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 interface ScrollIndicatorProps {
   className?: string;
 }
 
-const ScrollIndicator: React.FC<ScrollIndicatorProps> = ({
-  className = '',
-}) => {
+const ScrollIndicator = ({ className = '' }: ScrollIndicatorProps) => {
   const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => {

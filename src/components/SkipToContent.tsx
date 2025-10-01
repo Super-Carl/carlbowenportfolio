@@ -1,6 +1,4 @@
-import React from 'react';
-
-const SkipToContent: React.FC = () => {
+const SkipToContent = () => {
   const handleSkip = () => {
     const mainContent = document.getElementById('main-content');
     if (mainContent) {

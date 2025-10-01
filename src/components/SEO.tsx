@@ -1,4 +1,3 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOProps {
@@ -9,13 +8,13 @@ interface SEOProps {
   url?: string;
 }
 
-const SEO: React.FC<SEOProps> = ({
+const SEO = ({
   title = 'Carl Bowen - Full-Stack Developer & UI/UX Enthusiast',
   description = 'Professional portfolio of Carl Bowen, a full-stack developer specializing in React, TypeScript, Node.js, and modern web technologies.',
   keywords = 'Carl Bowen, Full-Stack Developer, React Developer, TypeScript, Node.js, Web Developer',
   image = '/og-image.jpg',
   url = 'https://carlbowen.dev',
-}) => {
+}: SEOProps) => {
   return (
     <Helmet>
       <title>{title}</title>

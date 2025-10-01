@@ -1,7 +1,6 @@
-import React from 'react';
 import SEO from '../components/SEO';
 
-const Skills: React.FC = () => {
+const Skills = () => {
   const skillCategories = [
     {
       title: 'AI & GenAI Technologies',

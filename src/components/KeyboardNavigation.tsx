@@ -1,14 +1,12 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { ReactNode, useEffect, useRef, useState } from 'react';
 import { useHotkeys } from 'react-hotkeys-hook';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 interface KeyboardNavigationProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
-const KeyboardNavigation: React.FC<KeyboardNavigationProps> = ({
-  children,
-}) => {
+const KeyboardNavigation = ({ children }: KeyboardNavigationProps) => {
   const navigate = useNavigate();
   const location = useLocation();
   const scrollTimeoutRef = useRef<number | null>(null);

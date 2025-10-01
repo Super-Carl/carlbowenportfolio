@@ -4,7 +4,7 @@
   "description": "Professional portfolio of Carl Bowen, an AI Transformation Consultant and Principal Developer with 8+ years of experience in senior engineering and leadership roles.",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "resources/images/favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },

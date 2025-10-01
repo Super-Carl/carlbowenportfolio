@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import LoadingSpinner from './LoadingSpinner';
 
 interface CVViewerProps {
@@ -6,7 +6,7 @@ interface CVViewerProps {
   onClose: () => void;
 }
 
-const CVViewer: React.FC<CVViewerProps> = ({ isOpen, onClose }) => {
+const CVViewer = ({ isOpen, onClose }: CVViewerProps) => {
   const [isLoading, setIsLoading] = useState(true);
 
   const handleDownload = () => {

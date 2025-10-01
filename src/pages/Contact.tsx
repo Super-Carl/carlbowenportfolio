@@ -13,7 +13,7 @@ interface FormErrors {
   message?: string;
 }
 
-const Contact: React.FC = () => {
+const Contact = () => {
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -109,8 +109,8 @@ const Contact: React.FC = () => {
       ),
     },
     {
-      name: 'Digiblez',
-      url: 'https://www.digiblez.com',
+      name: 'CarlBowen.me',
+      url: 'https://www.carlbowen.me',
       icon: (
         <svg className='w-6 h-6' fill='currentColor' viewBox='0 0 24 24'>
           <path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5' />
