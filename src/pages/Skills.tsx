@@ -1,64 +1,81 @@
 import React from 'react';
 import SEO from '../components/SEO';
 
-interface Skill {
-  name: string;
-  level: number;
-  category: string;
-  icon?: string;
-}
-
 const Skills: React.FC = () => {
   const skillCategories = [
     {
+      title: 'AI & GenAI Technologies',
+      skills: [
+        { name: 'GenAI', level: 100, category: 'ai' },
+        { name: 'GPT', level: 100, category: 'ai' },
+        { name: 'AI SDLC', level: 95, category: 'ai' },
+        { name: 'Prompting', level: 80, category: 'ai' },
+        { name: 'Vibe Coding', level: 80, category: 'ai' },
+        { name: 'Cursor', level: 80, category: 'ai' },
+        { name: 'Windsurf', level: 80, category: 'ai' },
+        { name: 'Copilot', level: 80, category: 'ai' },
+      ],
+    },
+    {
       title: 'Frontend Development',
       skills: [
-        { name: 'React', level: 95, category: 'frontend' },
-        { name: 'TypeScript', level: 90, category: 'frontend' },
-        { name: 'JavaScript', level: 95, category: 'frontend' },
-        { name: 'HTML/CSS', level: 98, category: 'frontend' },
-        { name: 'TailwindCSS', level: 92, category: 'frontend' },
-        { name: 'Next.js', level: 88, category: 'frontend' },
-        { name: 'Vue.js', level: 85, category: 'frontend' },
-        { name: 'SASS/SCSS', level: 90, category: 'frontend' }
-      ]
+        { name: 'React', level: 100, category: 'frontend' },
+        { name: 'Next.js', level: 100, category: 'frontend' },
+        { name: 'TypeScript', level: 95, category: 'frontend' },
+        { name: 'Redux', level: 80, category: 'frontend' },
+        { name: 'Apollo', level: 80, category: 'frontend' },
+        { name: 'Atomic Design', level: 80, category: 'frontend' },
+        { name: 'Design Systems', level: 80, category: 'frontend' },
+        { name: 'Figma', level: 80, category: 'frontend' },
+      ],
     },
     {
-      title: 'Backend Development',
+      title: 'Backend & APIs',
       skills: [
-        { name: 'Node.js', level: 90, category: 'backend' },
-        { name: 'Python', level: 85, category: 'backend' },
-        { name: 'Express.js', level: 92, category: 'backend' },
-        { name: 'FastAPI', level: 80, category: 'backend' },
-        { name: 'REST APIs', level: 95, category: 'backend' },
-        { name: 'GraphQL', level: 75, category: 'backend' },
-        { name: 'Microservices', level: 70, category: 'backend' }
-      ]
+        { name: 'Node.js', level: 100, category: 'backend' },
+        { name: 'REST APIs', level: 100, category: 'backend' },
+        { name: 'GraphQL', level: 80, category: 'backend' },
+        { name: 'AWS', level: 100, category: 'backend' },
+        { name: 'MongoDB', level: 90, category: 'backend' },
+        { name: 'Express.js', level: 95, category: 'backend' },
+        { name: 'MERN Stack', level: 95, category: 'backend' },
+      ],
     },
     {
-      title: 'Database & Cloud',
+      title: 'Leadership & Management',
       skills: [
-        { name: 'PostgreSQL', level: 88, category: 'database' },
-        { name: 'MongoDB', level: 85, category: 'database' },
-        { name: 'Redis', level: 80, category: 'database' },
-        { name: 'AWS', level: 75, category: 'cloud' },
-        { name: 'Docker', level: 85, category: 'cloud' },
-        { name: 'Kubernetes', level: 70, category: 'cloud' },
-        { name: 'CI/CD', level: 80, category: 'cloud' }
-      ]
+        { name: 'Team Leadership', level: 90, category: 'leadership' },
+        { name: 'Consulting', level: 80, category: 'leadership' },
+        { name: 'Managing', level: 80, category: 'leadership' },
+        { name: 'Hiring', level: 80, category: 'leadership' },
+        { name: 'Mentoring', level: 90, category: 'leadership' },
+        { name: 'Project Management', level: 85, category: 'leadership' },
+        { name: 'Stakeholder Management', level: 85, category: 'leadership' },
+      ],
     },
     {
-      title: 'Tools & Others',
+      title: 'Quality & Testing',
       skills: [
-        { name: 'Git', level: 95, category: 'tools' },
-        { name: 'Figma', level: 85, category: 'tools' },
-        { name: 'Adobe XD', level: 80, category: 'tools' },
-        { name: 'Jest', level: 88, category: 'tools' },
-        { name: 'Webpack', level: 75, category: 'tools' },
-        { name: 'Linux', level: 85, category: 'tools' },
-        { name: 'Agile/Scrum', level: 90, category: 'tools' }
-      ]
-    }
+        { name: 'SEO', level: 80, category: 'quality' },
+        { name: 'A11y (Accessibility)', level: 80, category: 'quality' },
+        { name: 'I18n (Internationalization)', level: 80, category: 'quality' },
+        { name: 'Jest', level: 90, category: 'quality' },
+        { name: 'Cypress', level: 85, category: 'quality' },
+        { name: 'Automated Testing', level: 90, category: 'quality' },
+        { name: 'Code Quality', level: 95, category: 'quality' },
+      ],
+    },
+    {
+      title: 'Emerging Technologies',
+      skills: [
+        { name: 'Web3', level: 60, category: 'emerging' },
+        { name: 'DeFi', level: 60, category: 'emerging' },
+        { name: 'NFTs', level: 60, category: 'emerging' },
+        { name: 'Blockchain', level: 60, category: 'emerging' },
+        { name: 'PWA', level: 85, category: 'emerging' },
+        { name: 'Zeplin', level: 80, category: 'emerging' },
+      ],
+    },
   ];
 
   const getCategoryColor = (category: string) => {
@@ -82,33 +99,88 @@ const Skills: React.FC = () => {
     switch (category) {
       case 'frontend':
         return (
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+          <svg
+            className='w-6 h-6'
+            fill='none'
+            stroke='currentColor'
+            viewBox='0 0 24 24'
+          >
+            <path
+              strokeLinecap='round'
+              strokeLinejoin='round'
+              strokeWidth={2}
+              d='M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4'
+            />
           </svg>
         );
       case 'backend':
         return (
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2" />
+          <svg
+            className='w-6 h-6'
+            fill='none'
+            stroke='currentColor'
+            viewBox='0 0 24 24'
+          >
+            <path
+              strokeLinecap='round'
+              strokeLinejoin='round'
+              strokeWidth={2}
+              d='M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2'
+            />
           </svg>
         );
       case 'database':
         return (
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4" />
+          <svg
+            className='w-6 h-6'
+            fill='none'
+            stroke='currentColor'
+            viewBox='0 0 24 24'
+          >
+            <path
+              strokeLinecap='round'
+              strokeLinejoin='round'
+              strokeWidth={2}
+              d='M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4'
+            />
           </svg>
         );
       case 'cloud':
         return (
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+          <svg
+            className='w-6 h-6'
+            fill='none'
+            stroke='currentColor'
+            viewBox='0 0 24 24'
+          >
+            <path
+              strokeLinecap='round'
+              strokeLinejoin='round'
+              strokeWidth={2}
+              d='M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z'
+            />
           </svg>
         );
       case 'tools':
         return (
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+          <svg
+            className='w-6 h-6'
+            fill='none'
+            stroke='currentColor'
+            viewBox='0 0 24 24'
+          >
+            <path
+              strokeLinecap='round'
+              strokeLinejoin='round'
+              strokeWidth={2}
+              d='M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z'
+            />
+            <path
+              strokeLinecap='round'
+              strokeLinejoin='round'
+              strokeWidth={2}
+              d='M15 12a3 3 0 11-6 0 3 3 0 016 0z'
+            />
           </svg>
         );
       default:
@@ -118,153 +190,216 @@ const Skills: React.FC = () => {
 
   return (
     <>
-      <SEO 
-        title="Skills & Expertise - Carl Bowen"
+      <SEO
+        title='Skills & Expertise - Carl Bowen'
         description="Comprehensive overview of Carl Bowen's technical skills including React, TypeScript, Node.js, Python, AWS, and more. Full-stack developer with expertise in modern web technologies."
-        keywords="Carl Bowen Skills, Technical Skills, React Developer Skills, TypeScript Skills, Node.js Skills, Full-Stack Developer Skills"
-        url="https://carlbowen.dev/skills"
+        keywords='Carl Bowen Skills, Technical Skills, React Developer Skills, TypeScript Skills, Node.js Skills, Full-Stack Developer Skills'
+        url='https://carlbowen.dev/skills'
       />
-      <div className="pt-16">
-      {/* Hero Section */}
-      <section className="section-padding bg-gradient-to-br from-primary-50 to-secondary-50">
-        <div className="container-max text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Skills & Expertise
-          </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            A comprehensive overview of my technical skills and areas of expertise 
-            across different technologies and domains.
-          </p>
-        </div>
-      </section>
+      <div className='pt-16'>
+        {/* Hero Section */}
+        <section className='section-padding bg-gradient-to-br from-primary-50 to-secondary-50'>
+          <div className='container-max text-center'>
+            <h1 className='text-4xl md:text-5xl font-bold text-gray-900 mb-6'>
+              Skills & Expertise
+            </h1>
+            <p className='text-xl text-gray-600 max-w-2xl mx-auto'>
+              A comprehensive overview of my technical skills and areas of
+              expertise across different technologies and domains.
+            </p>
+          </div>
+        </section>
 
-      {/* Skills Categories */}
-      <section className="section-padding bg-white">
-        <div className="container-max">
-          <div className="space-y-16">
-            {skillCategories.map((category, categoryIndex) => (
-              <div key={category.title}>
-                <div className="flex items-center mb-8">
-                  <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${getCategoryColor(category.skills[0].category)} flex items-center justify-center text-white mr-4`}>
-                    {getCategoryIcon(category.skills[0].category)}
-                  </div>
-                  <h2 className="text-3xl font-bold text-gray-900">{category.title}</h2>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {category.skills.map((skill, skillIndex) => (
-                    <div key={skill.name} className="card p-6">
-                      <div className="flex justify-between items-center mb-3">
-                        <h3 className="text-lg font-semibold text-gray-900">
-                          {skill.name}
-                        </h3>
-                        <span className="text-sm font-medium text-primary-600">
-                          {skill.level}%
-                        </span>
-                      </div>
-                      
-                      <div className="w-full bg-gray-200 rounded-full h-2">
-                        <div
-                          className={`h-2 rounded-full bg-gradient-to-r ${getCategoryColor(skill.category)} transition-all duration-1000 ease-out`}
-                          style={{
-                            width: `${skill.level}%`,
-                            animationDelay: `${(categoryIndex * 200) + (skillIndex * 100)}ms`
-                          }}
-                        ></div>
-                      </div>
+        {/* Skills Categories */}
+        <section className='section-padding bg-white'>
+          <div className='container-max'>
+            <div className='space-y-16'>
+              {skillCategories.map((category, categoryIndex) => (
+                <div key={category.title}>
+                  <div className='flex items-center mb-8'>
+                    <div
+                      className={`w-12 h-12 rounded-lg bg-gradient-to-br ${getCategoryColor(category.skills[0].category)} flex items-center justify-center text-white mr-4`}
+                    >
+                      {getCategoryIcon(category.skills[0].category)}
                     </div>
-                  ))}
+                    <h2 className='text-3xl font-bold text-gray-900'>
+                      {category.title}
+                    </h2>
+                  </div>
+
+                  <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+                    {category.skills.map((skill, skillIndex) => (
+                      <div key={skill.name} className='card p-6'>
+                        <div className='flex justify-between items-center mb-3'>
+                          <h3 className='text-lg font-semibold text-gray-900'>
+                            {skill.name}
+                          </h3>
+                          <span className='text-sm font-medium text-primary-600'>
+                            {skill.level}%
+                          </span>
+                        </div>
+
+                        <div className='w-full bg-gray-200 rounded-full h-2'>
+                          <div
+                            className={`h-2 rounded-full bg-gradient-to-r ${getCategoryColor(skill.category)} transition-all duration-1000 ease-out`}
+                            style={{
+                              width: `${skill.level}%`,
+                              animationDelay: `${categoryIndex * 200 + skillIndex * 100}ms`,
+                            }}
+                          ></div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Additional Skills */}
-      <section className="section-padding bg-gray-50">
-        <div className="container-max">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Additional Skills
-            </h2>
-            <p className="text-lg text-gray-600">
-              Other technologies and methodologies I work with
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-            {[
-              'Responsive Design', 'Mobile Development', 'PWA', 'SEO Optimization',
-              'Performance Optimization', 'Security Best Practices', 'Code Review',
-              'Technical Writing', 'Mentoring', 'Project Management', 'UI/UX Design',
-              'User Research', 'A/B Testing', 'Analytics', 'Monitoring', 'Testing',
-              'Documentation', 'Version Control', 'Code Quality', 'Refactoring',
-              'Architecture Design', 'System Design', 'API Design', 'Database Design'
-            ].map((skill) => (
-              <div
-                key={skill}
-                className="bg-white rounded-lg p-4 text-center hover:shadow-md transition-shadow duration-200"
-              >
-                <span className="text-sm font-medium text-gray-700">{skill}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Learning Journey */}
-      <section className="section-padding bg-white">
-        <div className="container-max">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Continuous Learning
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Technology evolves rapidly, and I'm committed to staying current with 
-              the latest trends and best practices in software development.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 mx-auto mb-4 bg-primary-100 rounded-full flex items-center justify-center">
-                <svg className="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Online Courses</h3>
-              <p className="text-gray-600">
-                Regularly taking courses on platforms like Udemy, Coursera, and Pluralsight
+        {/* Additional Skills */}
+        <section className='section-padding bg-gray-50'>
+          <div className='container-max'>
+            <div className='text-center mb-12'>
+              <h2 className='text-3xl font-bold text-gray-900 mb-4'>
+                Additional Skills
+              </h2>
+              <p className='text-lg text-gray-600'>
+                Other technologies and methodologies I work with
               </p>
             </div>
 
-            <div className="text-center">
-              <div className="w-16 h-16 mx-auto mb-4 bg-primary-100 rounded-full flex items-center justify-center">
-                <svg className="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Certifications</h3>
-              <p className="text-gray-600">
-                AWS Certified Developer, Google Cloud Professional, and more
+            <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4'>
+              {[
+                'Responsive Design',
+                'Mobile Development',
+                'PWA',
+                'SEO Optimization',
+                'Performance Optimization',
+                'Security Best Practices',
+                'Code Review',
+                'Technical Writing',
+                'Mentoring',
+                'Project Management',
+                'UI/UX Design',
+                'User Research',
+                'A/B Testing',
+                'Analytics',
+                'Monitoring',
+                'Testing',
+                'Documentation',
+                'Version Control',
+                'Code Quality',
+                'Refactoring',
+                'Architecture Design',
+                'System Design',
+                'API Design',
+                'Database Design',
+              ].map(skill => (
+                <div
+                  key={skill}
+                  className='bg-white rounded-lg p-4 text-center hover:shadow-md transition-shadow duration-200'
+                >
+                  <span className='text-sm font-medium text-gray-700'>
+                    {skill}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Learning Journey */}
+        <section className='section-padding bg-white'>
+          <div className='container-max'>
+            <div className='text-center mb-12'>
+              <h2 className='text-3xl font-bold text-gray-900 mb-4'>
+                Continuous Learning
+              </h2>
+              <p className='text-lg text-gray-600 max-w-2xl mx-auto'>
+                Technology evolves rapidly, and I'm committed to staying current
+                with the latest trends and best practices in software
+                development.
               </p>
             </div>
 
-            <div className="text-center">
-              <div className="w-16 h-16 mx-auto mb-4 bg-primary-100 rounded-full flex items-center justify-center">
-                <svg className="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+              <div className='text-center'>
+                <div className='w-16 h-16 mx-auto mb-4 bg-primary-100 rounded-full flex items-center justify-center'>
+                  <svg
+                    className='w-8 h-8 text-primary-600'
+                    fill='none'
+                    stroke='currentColor'
+                    viewBox='0 0 24 24'
+                  >
+                    <path
+                      strokeLinecap='round'
+                      strokeLinejoin='round'
+                      strokeWidth={2}
+                      d='M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253'
+                    />
+                  </svg>
+                </div>
+                <h3 className='text-xl font-semibold text-gray-900 mb-2'>
+                  Online Courses
+                </h3>
+                <p className='text-gray-600'>
+                  Regularly taking courses on platforms like Udemy, Coursera,
+                  and Pluralsight
+                </p>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Community</h3>
-              <p className="text-gray-600">
-                Active in developer communities, contributing to open source projects
-              </p>
+
+              <div className='text-center'>
+                <div className='w-16 h-16 mx-auto mb-4 bg-primary-100 rounded-full flex items-center justify-center'>
+                  <svg
+                    className='w-8 h-8 text-primary-600'
+                    fill='none'
+                    stroke='currentColor'
+                    viewBox='0 0 24 24'
+                  >
+                    <path
+                      strokeLinecap='round'
+                      strokeLinejoin='round'
+                      strokeWidth={2}
+                      d='M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10'
+                    />
+                  </svg>
+                </div>
+                <h3 className='text-xl font-semibold text-gray-900 mb-2'>
+                  Certifications
+                </h3>
+                <p className='text-gray-600'>
+                  AWS Certified Developer, Google Cloud Professional, and more
+                </p>
+              </div>
+
+              <div className='text-center'>
+                <div className='w-16 h-16 mx-auto mb-4 bg-primary-100 rounded-full flex items-center justify-center'>
+                  <svg
+                    className='w-8 h-8 text-primary-600'
+                    fill='none'
+                    stroke='currentColor'
+                    viewBox='0 0 24 24'
+                  >
+                    <path
+                      strokeLinecap='round'
+                      strokeLinejoin='round'
+                      strokeWidth={2}
+                      d='M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z'
+                    />
+                  </svg>
+                </div>
+                <h3 className='text-xl font-semibold text-gray-900 mb-2'>
+                  Community
+                </h3>
+                <p className='text-gray-600'>
+                  Active in developer communities, contributing to open source
+                  projects
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
       </div>
     </>
   );
