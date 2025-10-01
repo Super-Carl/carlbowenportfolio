@@ -4,6 +4,9 @@ import { HelmetProvider } from 'react-helmet-async';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollIndicator from './components/ScrollIndicator';
+import ScrollToTop from './components/ScrollToTop';
+import SkipToContent from './components/SkipToContent';
+import PerformanceOptimizations from './components/PerformanceOptimizations';
 import KeyboardNavigation from './components/KeyboardNavigation';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -17,6 +20,8 @@ function App() {
       <Router>
         <KeyboardNavigation>
           <div className='min-h-screen bg-gray-50'>
+            <SkipToContent />
+            <PerformanceOptimizations />
             <ScrollIndicator />
             <Header />
             <main role='main' id='main-content'>
@@ -29,6 +34,7 @@ function App() {
               </Routes>
             </main>
             <Footer />
+            <ScrollToTop />
           </div>
         </KeyboardNavigation>
       </Router>

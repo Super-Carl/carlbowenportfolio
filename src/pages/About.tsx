@@ -7,7 +7,7 @@ const About: React.FC = () => {
 
   const handleDownloadResume = () => {
     const link = document.createElement('a');
-    link.href = '/cv.pdf';
+    link.href = '/resources/docs/cv.pdf';
     link.download = 'Carl_Bowen_Resume.pdf';
     document.body.appendChild(link);
     link.click();
@@ -75,8 +75,16 @@ const About: React.FC = () => {
               {/* Profile Image */}
               <div className='order-2 lg:order-1'>
                 <div className='relative'>
-                  <div className='w-full h-96 bg-gradient-to-br from-primary-400 to-primary-600 rounded-lg flex items-center justify-center text-white text-6xl font-bold shadow-lg'>
-                    CB
+                  <div className='w-full h-96 rounded-lg overflow-hidden shadow-lg'>
+                    <img
+                      src='/resources/images/profile-img.jpeg'
+                      alt='Carl Bowen - AI Transformation Consultant'
+                      className='w-full h-full object-cover'
+                      loading='lazy'
+                      width='400'
+                      height='384'
+                      decoding='async'
+                    />
                   </div>
                   <div className='absolute -bottom-4 -right-4 w-24 h-24 bg-secondary-200 rounded-full flex items-center justify-center'>
                     <span className='text-2xl'>💻</span>

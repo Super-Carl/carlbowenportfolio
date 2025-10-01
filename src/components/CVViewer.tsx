@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import LoadingSpinner from './LoadingSpinner';
 
 interface CVViewerProps {
   isOpen: boolean;
@@ -10,7 +11,7 @@ const CVViewer: React.FC<CVViewerProps> = ({ isOpen, onClose }) => {
 
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = '/cv.pdf';
+    link.href = '/resources/docs/cv.pdf';
     link.download = 'Carl_Bowen_Resume.pdf';
     document.body.appendChild(link);
     link.click();
@@ -18,7 +19,7 @@ const CVViewer: React.FC<CVViewerProps> = ({ isOpen, onClose }) => {
   };
 
   const copyLink = () => {
-    const url = `${window.location.origin}/cv.pdf`;
+    const url = `${window.location.origin}/resources/docs/cv.pdf`;
     navigator.clipboard.writeText(url).then(() => {
       // You could add a toast notification here
       alert('CV link copied to clipboard!');
@@ -69,11 +70,11 @@ const CVViewer: React.FC<CVViewerProps> = ({ isOpen, onClose }) => {
         <div className='flex-1 overflow-hidden'>
           {isLoading && (
             <div className='flex items-center justify-center h-full'>
-              <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-primary-600'></div>
+              <LoadingSpinner size='lg' />
             </div>
           )}
           <iframe
-            src='/cv.pdf#toolbar=1&navpanes=0&scrollbar=1'
+            src='/resources/docs/cv.pdf#toolbar=1&navpanes=0&scrollbar=1'
             className='w-full h-full border-0'
             title="Carl Bowen's Resume"
             onLoad={() => setIsLoading(false)}

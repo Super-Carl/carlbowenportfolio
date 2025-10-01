@@ -77,13 +77,16 @@ const KeyboardNavigation: React.FC<KeyboardNavigationProps> = ({
   useHotkeys(
     'up',
     () => {
-      const sections = document.querySelectorAll('section[id]');
+      const sections = document.querySelectorAll('section');
       const currentScroll = window.scrollY;
+      const headerHeight = 80; // Account for fixed header
 
       for (let i = sections.length - 1; i >= 0; i--) {
         const section = sections[i] as HTMLElement;
-        if (section.offsetTop < currentScroll - 100) {
-          section.scrollIntoView({ behavior: 'smooth' });
+        const sectionTop = section.offsetTop - headerHeight;
+
+        if (sectionTop < currentScroll - 50) {
+          section.scrollIntoView({ behavior: 'smooth', block: 'start' });
           break;
         }
       }
@@ -94,13 +97,16 @@ const KeyboardNavigation: React.FC<KeyboardNavigationProps> = ({
   useHotkeys(
     'down',
     () => {
-      const sections = document.querySelectorAll('section[id]');
+      const sections = document.querySelectorAll('section');
       const currentScroll = window.scrollY;
+      const headerHeight = 80; // Account for fixed header
 
       for (let i = 0; i < sections.length; i++) {
         const section = sections[i] as HTMLElement;
-        if (section.offsetTop > currentScroll + 100) {
-          section.scrollIntoView({ behavior: 'smooth' });
+        const sectionTop = section.offsetTop - headerHeight;
+
+        if (sectionTop > currentScroll + 50) {
+          section.scrollIntoView({ behavior: 'smooth', block: 'start' });
           break;
         }
       }

@@ -18,8 +18,16 @@ const Home: React.FC = () => {
             <div className='max-w-4xl mx-auto'>
               {/* Profile Photo */}
               <div className='mb-8'>
-                <div className='w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center text-white text-4xl font-bold shadow-lg'>
-                  CB
+                <div className='w-32 h-32 mx-auto rounded-full overflow-hidden shadow-lg ring-4 ring-primary-200'>
+                  <img
+                    src='/resources/images/profile-img.jpeg'
+                    alt='Carl Bowen - AI Transformation Consultant'
+                    className='w-full h-full object-cover'
+                    loading='eager'
+                    width='128'
+                    height='128'
+                    decoding='async'
+                  />
                 </div>
               </div>
 
