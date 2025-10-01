@@ -6,9 +6,12 @@ const About: React.FC = () => {
   const [isCVViewerOpen, setIsCVViewerOpen] = useState(false);
 
   const handleDownloadResume = () => {
+    const now = new Date();
+    const month = now.toLocaleString('default', { month: 'long' });
+    const year = now.getFullYear();
     const link = document.createElement('a');
     link.href = '/resources/docs/cv.pdf';
-    link.download = 'Carl_Bowen_Resume.pdf';
+    link.download = `Carl Bowen, CV (${month} ${year}).pdf`;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -34,8 +37,8 @@ const About: React.FC = () => {
       ),
     },
     {
-      name: 'Digiblez',
-      url: 'https://www.digiblez.com',
+      name: 'CarlBowen.me',
+      url: 'https://carlbowen.me',
       icon: (
         <svg className='w-6 h-6' fill='currentColor' viewBox='0 0 24 24'>
           <path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5' />

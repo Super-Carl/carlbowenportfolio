@@ -10,9 +10,12 @@ const CVViewer: React.FC<CVViewerProps> = ({ isOpen, onClose }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   const handleDownload = () => {
+    const now = new Date();
+    const month = now.toLocaleString('default', { month: 'long' });
+    const year = now.getFullYear();
     const link = document.createElement('a');
     link.href = '/resources/docs/cv.pdf';
-    link.download = 'Carl_Bowen_Resume.pdf';
+    link.download = `Carl Bowen, CV (${month} ${year}).pdf`;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

@@ -106,6 +106,34 @@
     }
   }
 
+  /* Mobile-first responsive improvements */
+  @media (max-width: 640px) {
+    .container-max {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    .section-padding {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+  }
+
+  /* Touch-friendly interactions */
+  @media (hover: none) and (pointer: coarse) {
+    .btn-primary,
+    .btn-secondary {
+      min-height: 44px;
+      min-width: 44px;
+    }
+
+    button,
+    a {
+      min-height: 44px;
+      min-width: 44px;
+    }
+  }
+
   /* Print styles */
   @media print {
     .no-print {

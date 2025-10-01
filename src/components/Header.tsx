@@ -131,8 +131,8 @@ const Header: React.FC = () => {
         )}
       </nav>
 
-      {/* Keyboard Shortcuts Help */}
-      <div className='hidden lg:block fixed top-20 right-4 bg-white rounded-lg shadow-lg p-4 text-sm text-gray-600 max-w-xs z-40'>
+      {/* Keyboard Shortcuts Help - Hidden on mobile for better UX */}
+      <div className='hidden xl:block fixed top-20 right-4 bg-white rounded-lg shadow-lg p-4 text-sm text-gray-600 max-w-xs z-40'>
         <h3 className='font-semibold text-gray-900 mb-2'>Keyboard Shortcuts</h3>
         <ul className='space-y-1'>
           <li>

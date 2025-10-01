@@ -7,12 +7,27 @@
       "src": "favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
+    },
+    {
+      "src": "resources/images/profile-img.jpeg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "resources/images/profile-img.jpeg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
   "theme_color": "#0ea5e9",
   "background_color": "#ffffff",
   "orientation": "portrait-primary",
-  "categories": ["business", "productivity", "utilities"]
+  "categories": ["business", "productivity", "utilities"],
+  "lang": "en",
+  "scope": "/",
+  "id": "carl-bowen-portfolio"
 }

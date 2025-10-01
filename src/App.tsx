@@ -6,6 +6,8 @@ import Footer from './components/Footer';
 import ScrollIndicator from './components/ScrollIndicator';
 import ScrollToTop from './components/ScrollToTop';
 import SkipToContent from './components/SkipToContent';
+import PWAInstall from './components/PWAInstall';
+import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
 import PerformanceOptimizations from './components/PerformanceOptimizations';
 import KeyboardNavigation from './components/KeyboardNavigation';
 import Home from './pages/Home';
@@ -20,6 +22,7 @@ function App() {
       <Router>
         <KeyboardNavigation>
           <div className='min-h-screen bg-gray-50'>
+            <ServiceWorkerRegistration />
             <SkipToContent />
             <PerformanceOptimizations />
             <ScrollIndicator />
@@ -35,6 +38,7 @@ function App() {
             </main>
             <Footer />
             <ScrollToTop />
+            <PWAInstall />
           </div>
         </KeyboardNavigation>
       </Router>

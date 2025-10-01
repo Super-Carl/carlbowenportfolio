@@ -30,11 +30,11 @@ const ScrollToTop: React.FC = () => {
   return (
     <button
       onClick={scrollToTop}
-      className='fixed bottom-6 right-6 z-50 bg-primary-600 hover:bg-primary-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2'
+      className='fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 bg-primary-600 hover:bg-primary-700 text-white p-3 sm:p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 min-h-[44px] min-w-[44px]'
       aria-label='Scroll to top'
     >
       <svg
-        className='w-6 h-6'
+        className='w-5 h-5 sm:w-6 sm:h-6'
         fill='none'
         stroke='currentColor'
         viewBox='0 0 24 24'
