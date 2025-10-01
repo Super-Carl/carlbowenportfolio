@@ -10,7 +10,7 @@ const About = () => {
     const month = now.toLocaleString('default', { month: 'long' });
     const year = now.getFullYear();
     const link = document.createElement('a');
-    link.href = '/resources/docs/cv.pdf';
+    link.href = '/docs/cv.pdf';
     link.download = `Carl Bowen, CV (${month} ${year}).pdf`;
     document.body.appendChild(link);
     link.click();
@@ -80,7 +80,7 @@ const About = () => {
                 <div className='relative'>
                   <div className='w-full h-96 rounded-lg overflow-hidden shadow-lg'>
                     <img
-                      src='/resources/images/profile-img.jpeg'
+                      src='/images/profile-img.jpeg'
                       alt='Carl Bowen - AI Transformation Consultant'
                       className='w-full h-full object-cover'
                       loading='lazy'
@@ -202,7 +202,7 @@ const About = () => {
                 <div className='flex items-start space-x-4'>
                   <div className='flex-shrink-0 w-12 h-12 bg-white rounded-full mt-2 flex items-center justify-center shadow-md'>
                     <img
-                      src='/resources/images/brands/admiral-group.jpeg'
+                      src='/images/brands/admiral-group.jpeg'
                       alt='Admiral Group logo'
                       className='w-8 h-8 object-contain'
                       loading='lazy'
@@ -233,7 +233,7 @@ const About = () => {
                 <div className='flex items-start space-x-4'>
                   <div className='flex-shrink-0 w-12 h-12 bg-white rounded-full mt-2 flex items-center justify-center shadow-md'>
                     <img
-                      src='/resources/images/brands/digiblez.jpg'
+                      src='/images/brands/digiblez.jpg'
                       alt='Digiblez logo'
                       className='w-8 h-8 object-contain'
                       loading='lazy'
@@ -263,7 +263,7 @@ const About = () => {
                 <div className='flex items-start space-x-4'>
                   <div className='flex-shrink-0 w-12 h-12 bg-white rounded-full mt-2 flex items-center justify-center shadow-md'>
                     <img
-                      src='/resources/images/brands/experian.jpeg'
+                      src='/images/brands/experian.jpeg'
                       alt='Experian logo'
                       className='w-8 h-8 object-contain'
                       loading='lazy'
@@ -294,7 +294,7 @@ const About = () => {
                 <div className='flex items-start space-x-4'>
                   <div className='flex-shrink-0 w-12 h-12 bg-white rounded-full mt-2 flex items-center justify-center shadow-md'>
                     <img
-                      src='/resources/images/brands/digiblez.jpg'
+                      src='/images/brands/digiblez.jpg'
                       alt='Digiblez logo'
                       className='w-8 h-8 object-contain'
                       loading='lazy'
@@ -325,7 +325,7 @@ const About = () => {
                 <div className='flex items-start space-x-4'>
                   <div className='flex-shrink-0 w-12 h-12 bg-white rounded-full mt-2 flex items-center justify-center shadow-md'>
                     <img
-                      src='/resources/images/brands/raise.jpeg'
+                      src='/images/brands/raise.jpeg'
                       alt='Raise logo'
                       className='w-8 h-8 object-contain'
                       loading='lazy'

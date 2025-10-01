@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
+import InteractiveSkillBadges from '../components/InteractiveSkillBadges';
 
 const Home = () => {
   return (
@@ -12,14 +13,15 @@ const Home = () => {
       />
       <div className='pt-16'>
         {/* Hero Section */}
-        <section className='min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 to-secondary-50'>
-          <div className='container-max text-center'>
+        <section className='min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 to-secondary-50 relative'>
+          <InteractiveSkillBadges />
+          <div className='container-max text-center relative z-10'>
             <div className='max-w-4xl mx-auto'>
               {/* Profile Photo */}
               <div className='mb-8'>
                 <div className='w-32 h-32 mx-auto rounded-full overflow-hidden shadow-lg ring-4 ring-primary-200'>
                   <img
-                    src='/resources/images/profile-img.jpeg'
+                    src='/images/profile-img.jpeg'
                     alt='Carl Bowen - AI Transformation Consultant'
                     className='w-full h-full object-cover'
                     loading='eager'

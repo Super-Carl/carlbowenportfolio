@@ -53,6 +53,33 @@
       transform: translateY(0);
     }
   }
+
+  @keyframes badgeAnimation {
+    0% {
+      transform: scale(0.8) translateY(0px);
+      opacity: 0;
+    }
+    20% {
+      transform: scale(1.1) translateY(-10px);
+      opacity: 1;
+    }
+    40% {
+      transform: scale(1) translateY(-5px);
+      opacity: 1;
+    }
+    60% {
+      transform: scale(1) translateY(0px);
+      opacity: 1;
+    }
+    80% {
+      transform: scale(0.9) translateY(5px);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(0.8) translateY(10px);
+      opacity: 0;
+    }
+  }
 }
 
 @layer components {

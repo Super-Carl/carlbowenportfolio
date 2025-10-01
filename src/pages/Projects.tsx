@@ -20,6 +20,42 @@ const Projects = () => {
   const projects: Project[] = [
     {
       id: 1,
+      title: 'AI Transformation Strategy & Implementation',
+      description:
+        'Leading AI transformation initiatives at Admiral Group Plc, planning and evaluating AI-driven requirements analysis, design, code generation, review, and unit testing. Designing CI/CD build strategies with AI automation, integration testing, debugging, and non-functional testing.',
+      technologies: [
+        'AI Strategy',
+        'GenAI',
+        'CI/CD',
+        'Automation',
+        'Requirements Analysis',
+        'Code Generation',
+      ],
+      image: '/api/placeholder/600/400',
+      year: 2025,
+      company: 'Admiral Group Plc',
+      companyLogo: '/images/brands/admiral-group.jpeg',
+    },
+    {
+      id: 2,
+      title: 'AI Readiness Assessment & Roadmap',
+      description:
+        'Conducted comprehensive AI readiness assessments across systems, data, and workflows at Digiblez. Identified high-impact AI/GenAI use cases and designed AI adoption strategies and roadmaps. Led change management and culture shift for AI adoption.',
+      technologies: [
+        'AI Assessment',
+        'GenAI',
+        'Strategy',
+        'Change Management',
+        'Roadmapping',
+        'Culture Transformation',
+      ],
+      image: '/api/placeholder/600/400',
+      year: 2025,
+      company: 'Digiblez',
+      companyLogo: '/images/brands/digiblez.jpg',
+    },
+    {
+      id: 3,
       title: 'Experian Credit Lock Feature',
       description:
         "Built Experian's credit lock feature to prevent fraudulent credit applications. Developed secure APIs and integrated identity verification workflows with responsive, real-time UI for lock/unlock functionality.",
@@ -35,10 +71,10 @@ const Projects = () => {
       liveUrl: 'https://www.experian.co.uk',
       year: 2024,
       company: 'Experian',
-      companyLogo: '/resources/images/brands/experian.jpeg',
+      companyLogo: '/images/brands/experian.jpeg',
     },
     {
-      id: 2,
+      id: 4,
       title: 'Digiblez Freelancing Platform',
       description:
         'Led greenfield development of a next-gen freelancing platform using MERN stack. Managed and mentored an 8-person dev team, ensuring code quality and team performance while driving system design and scalability.',
@@ -55,10 +91,10 @@ const Projects = () => {
       liveUrl: 'https://www.digiblez.com',
       year: 2023,
       company: 'Digiblez',
-      companyLogo: '/resources/images/brands/digiblez.jpg',
+      companyLogo: '/images/brands/digiblez.jpg',
     },
     {
-      id: 3,
+      id: 5,
       title: 'Raise Agency Management Platform',
       description:
         'Built a modern atomic design system in collaboration with the UI Director. Developed and launched a robust agency management platform while mentoring a large outsourced team of junior developers.',
@@ -74,10 +110,10 @@ const Projects = () => {
       image: '/api/placeholder/600/400',
       year: 2022,
       company: 'Raise',
-      companyLogo: '/resources/images/brands/raise.jpeg',
+      companyLogo: '/images/brands/raise.jpeg',
     },
     {
-      id: 4,
+      id: 6,
       title: 'Vibrant Media Contextual Targeting',
       description:
         'Led a multi-level development team to create advanced keyword-level technology for precise contextual targeting. Shaped product UI design direction and ensured 100% automated test coverage.',
@@ -93,10 +129,10 @@ const Projects = () => {
       image: '/api/placeholder/600/400',
       year: 2021,
       company: 'Vibrant Media',
-      companyLogo: '/resources/images/brands/vibrant-media.jpeg',
+      companyLogo: '/images/brands/vibrant-media.jpeg',
     },
     {
-      id: 5,
+      id: 7,
       title: 'Superbet Sports Betting Platform',
       description:
         'Developed a greenfield sports betting platform with progressive enhancement via PWA. Led a 5-dev team enforcing strict code reviews and achieved 100% automated test coverage.',
@@ -112,10 +148,10 @@ const Projects = () => {
       image: '/api/placeholder/600/400',
       year: 2020,
       company: 'Superbet',
-      companyLogo: '/resources/images/brands/superbet.jpeg',
+      companyLogo: '/images/brands/superbet.jpeg',
     },
     {
-      id: 6,
+      id: 8,
       title: 'Endemol Shine Slot Games',
       description:
         'Developed bespoke slot games including Dumb and Dumber, Oliver Twist, and Deal or No Deal. Engineered core game mechanics and graphics, transitioning to hybrid QA Lead role.',
@@ -130,12 +166,13 @@ const Projects = () => {
       image: '/api/placeholder/600/400',
       year: 2019,
       company: 'Endemol Shine Group',
-      companyLogo: '/resources/images/brands/endemol-shine-group.jpeg',
+      companyLogo: '/images/brands/endemol-shine-group.jpeg',
     },
   ];
 
   const categories = [
     { value: 'all', label: 'All' },
+    { value: '2025', label: '2025' },
     { value: '2024', label: '2024' },
     { value: '2023', label: '2023' },
     { value: '2022', label: '2022' },

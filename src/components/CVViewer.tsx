@@ -14,7 +14,7 @@ const CVViewer = ({ isOpen, onClose }: CVViewerProps) => {
     const month = now.toLocaleString('default', { month: 'long' });
     const year = now.getFullYear();
     const link = document.createElement('a');
-    link.href = '/resources/docs/cv.pdf';
+    link.href = '/docs/cv.pdf';
     link.download = `Carl Bowen, CV (${month} ${year}).pdf`;
     document.body.appendChild(link);
     link.click();
@@ -22,7 +22,7 @@ const CVViewer = ({ isOpen, onClose }: CVViewerProps) => {
   };
 
   const copyLink = () => {
-    const url = `${window.location.origin}/resources/docs/cv.pdf`;
+    const url = `${window.location.origin}/docs/cv.pdf`;
     navigator.clipboard.writeText(url).then(() => {
       // You could add a toast notification here
       alert('CV link copied to clipboard!');
@@ -77,7 +77,7 @@ const CVViewer = ({ isOpen, onClose }: CVViewerProps) => {
             </div>
           )}
           <iframe
-            src='/resources/docs/cv.pdf#toolbar=1&navpanes=0&scrollbar=1'
+            src='/docs/cv.pdf#toolbar=1&navpanes=0&scrollbar=1'
             className='w-full h-full border-0'
             title="Carl Bowen's Resume"
             onLoad={() => setIsLoading(false)}
